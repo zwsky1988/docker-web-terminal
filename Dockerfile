@@ -1,7 +1,8 @@
-FROM dockerfile/nodejs
-MAINTAINER Vangie Du from Coding IDE Team <duwan@coding.net>
+FROM ubuntu:14.04
 
 EXPOSE 5000
+
+RUN apt-get update && apt-get install -y vim traceroute golang gcc sysstat 
 
 ADD *.json index.* ./
 
